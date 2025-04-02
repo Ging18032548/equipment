@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addmin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="adminpage.css">
+</head>
+<body>
+    <header>
+        <h1>Data Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</li>
+                <li><a href="#users">User</a></li>
+                <li><a href="#settings">Setting</a></li>
+                <li><a href="#logout" id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="overview">
+            <h2>Overview</h2>
+                <p>Conslusion of the system.</p>
+                
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>Number of Users</h3>
+                    <p id="userCount">0</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Number of User Today</h3>
+                    <p id="usageToday">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="users">
+            <h2>All Users</h2>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated by JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="settings">
+            <h2>Setting</h2>
+            <button id="updateSettingsBtn">Update Setting</button>
+            <!-- Popup message -->
+            <div id="updateMessage" style="display: none; color: green; margin-top: 10px;">
+                Updated successfully!
+            </div>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+    <p>
+        <a href="webpage.html" class="btn back-home">Back to Homepage</a>.</p>
+</body>
+</html>

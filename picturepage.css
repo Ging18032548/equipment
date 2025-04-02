@@ -1,0 +1,209 @@
+/* Reset margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global settings */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Header styling */
+header h1 {
+    font-size: 2.5rem;
+    color: #2a5298; /* Blue tone for the header */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container for all items */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-layout grid */
+    gap: 30px;
+    padding: 20px;
+    justify-content: center; 
+}
+
+.equipments-con {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* grid-gap: 20px; */
+}
+
+/* Equipment item card */
+.equipments-item {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    width: 100%;
+    padding: 15px;
+}
+
+.equipments-item:hover {
+    transform: scale(1.05);
+    outline: 2px solid #283593;
+}
+
+/* Image styling */
+.equipments-img img {
+    width: 100%;
+    max-height: 150px;  /* Reduced the height of the image */
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px;
+}
+
+/* Info section styling */
+.equipments-info {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9; /* Box background color */
+    border-radius: 8px;  /* Rounded corners for the info box */
+    border: 1px solid #ddd;  /* Border around the info box */
+}
+
+.equipments-info h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.equipments-info h3 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.equipments-info h4 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Status layout */
+.Status-left, .Status-right {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.Status-left {
+    background-color: #afbfff;
+    color: white;
+}
+
+.Status-right {
+    background-color: #f48fb1;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.back-to-homepage {
+    position: absolute; 
+    bottom: 80px; /* ระยะระหว่างกรอบกับปุ่ม */
+    left: 50%; 
+    transform: translateX(-50%); /* แสดงกลางหน้าจอพอดี */
+    color: #2a5298; 
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    text-decoration: none; 
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+/* Hover effect สำหรับปุ่ม */
+.back-to-homepage:hover {
+    background-color: black; 
+    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อ hover */
+    color: white;
+}
+
+/* สไตล์ของแถบเมนู */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* ซ่อนแถบเมนูไว้ทางซ้าย */
+    width: 250px;
+    height: 100%;
+    color: black;
+    transition: left 0.3s ease; /* ทำให้การแสดงผลของแถบเมนูเป็นไปอย่างนุ่มนวล */
+    z-index: 1000; /* ทำให้แถบเมนูอยู่เหนือเนื้อหา */
+}
+
+.slide-menu ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.slide-menu li {
+    margin-bottom: 10px;
+}
+
+.slide-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.slide-menu a:hover {
+    background-color: #444;
+    color: white;
+}
+
+/* ปุ่มเปิด/ปิดเมนู */
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 15px;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    z-index: 1050; /* ทำให้ปุ่มอยู่เหนือเมนู */
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-toggle:hover {
+    background-color: #1a237e;
+    transform: scale(1.05);
+}
+/* เมื่อคลิกที่ปุ่ม, แถบเมนูจะเลื่อนเข้ามา */
+.slide-menu.active {
+    left: 0;
+}
+
+.menu-toggle.hidden {
+    display: none; /* ซ่อนปุ่มเมนู */
+}
+

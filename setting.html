@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Office Management</title>
+    <link rel="stylesheet" href="setting.css"> <!-- เชื่อมกับ CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Settings</h1>
+
+        <!-- Profile Section -->
+        <div class="settings-group">
+            <h2>Profile</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+
+            <label for="password">New Password:</label>
+            <input type="password" id="password">
+            
+            <button onclick="saveProfile()">Save Profile</button>
+        </div>
+
+        <!-- System Settings Section -->
+        <div class="settings-group">
+            <h2>System Settings</h2>
+            <label>
+                <input type="checkbox" id="darkMode"> Enable Dark Mode
+            </label>
+            <label>
+                <input type="checkbox" id="notifications"> Enable Notifications
+            </label>
+            <button onclick="saveSystemSettings()">Save System Settings</button>
+        </div>
+
+        <!-- Logout Section -->
+        <div class="settings-group">
+            <h2>Logout</h2>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+        <a href="webpage.html" class="btn back-home">Back to Webpage</a>
+    </div>
+
+    <script src="setting.js"></script> <!-- เชื่อมกับ JS -->
+</body>
+</html>

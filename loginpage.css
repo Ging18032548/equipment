@@ -1,0 +1,112 @@
+/* ตั้งค่าพื้นฐานสำหรับ body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* จัดเนื้อหาให้อยู่ตรงกลางแนวนอน */
+    align-items: center;      /* จัดเนื้อหาให้อยู่ตรงกลางแนวตั้ง */
+    height: 100vh;            /* ให้พื้นที่เต็มหน้าจอ */
+  }
+  
+  /* กรอบหลักสำหรับเนื้อหา */
+  .content-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* ขนาดกรอบ */
+    box-sizing: border-box;
+    text-align: center;  /* จัดให้ส่วนหัวและลิงก์อยู่ตรงกลาง */
+  }
+  
+  /* ส่วนหัวหลัก */
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1e2a47;
+    margin-bottom: 25px;
+  }
+  
+  /* สไตล์ฟอร์ม */
+  form {
+    text-align: left;  /* กำหนดให้ฟอร์มจัดชิดซ้ายเพื่อให้ label และ input เรียงชิดกัน */
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #1e2a47;
+    font-weight: 500;
+  }
+  
+  form input[type="text"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 12px 16px;    /* เพิ่ม padding ให้ชิดขอบน้อยลง */
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="password"]:focus {
+    border-color: #1e2a47;
+    box-shadow: 0 0 8px rgba(30, 42, 71, 0.2);
+  }
+  
+  form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #000066;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #333;
+  }
+  
+  /* ลิงก์สำหรับสมัครสมาชิก */
+  .register-link {
+    font-size: 15px;    
+    margin-top: 20px;
+    padding: 0 20px;     /* เพิ่มระยะห่างด้านซ้ายและขวา ไม่ให้ชิดขอบ */
+    text-align: center;
+  }
+  
+  .register-link a {
+    color: #1e2a47;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ลิงก์กลับหน้าแรก */
+  .back-home {
+    display: block;
+    margin: 15px auto 0 auto;  /* จัดให้อยู่กลางและเว้นด้านบน */
+    font-size: 16px;
+    color: #1a237e;
+    text-decoration: none;
+  }
+  
+  .back-home:hover {
+    text-decoration: underline;
+  }
+  

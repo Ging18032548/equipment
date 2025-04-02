@@ -1,0 +1,99 @@
+# services:
+#   db:
+#     image: mysql:5.7
+#     container_name: mysql_db
+#     command: --default-authentication-plugin=mysql_native_password
+#     environment:
+#       MYSQL_ROOT_PASSWORD: root
+#       MYSQL_DATABASE: newdb   # ใช้ชื่อฐานข้อมูลใหม่
+#     ports:
+#       # - "8880:3306"  # พอร์ตที่แมป
+#       - "8881:3306" # Change 8880 to 8881
+
+#     volumes:
+#       - mysql_data:/var/lib/mysql
+#       - ./init.sql:/docker-entrypoint-initdb.d/init.sql  # ใช้ไฟล์ init.sql เพื่อสร้างฐานข้อมูลและตารางใหม่
+#     networks:
+#       - management
+#     restart: always
+#     healthcheck:
+#       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+#       interval: 10s
+#       retries: 5
+#       start_period: 30s
+#       timeout: 10s
+
+#   phpmyadmin:
+#     image: phpmyadmin/phpmyadmin:latest
+#     container_name: phpmyadmin
+#     environment:
+#       PMA_HOST: mysql_db
+#       PMA_PORT: 3306
+#       PMA_USER: root
+#       PMA_PASSWORD: root
+#     ports:
+#       - "8080:80"
+#     depends_on:
+#       db:
+#         condition: service_healthy
+#     networks:
+#       - management
+#     restart: always
+
+# networks:
+#   management:
+#     driver: bridge
+
+# volumes:
+#   mysql_data:
+#     driver: local
+
+
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql_db
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: webdb   # ใช้ชื่อฐานข้อมูลใหม่
+    ports:
+      - "8881:3306"  # พอร์ตที่ใช้ในเครื่องโฮสต์จะเป็น 8881 และเชื่อมต่อกับ 3306 ของ MySQL container
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql  # ใช้ไฟล์ init.sql เพื่อสร้างฐานข้อมูลและตารางใหม่
+    networks:
+      - management
+    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 10s
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: mysql_db
+      PMA_PORT: 3306  # ใช้พอร์ต 3306 สำหรับการเชื่อมต่อกับ MySQL container
+      PMA_USER: root
+      PMA_PASSWORD: root
+    ports:
+      - "8080:80"  # เปิดพอร์ต 8080 บนเครื่องโฮสต์เพื่อเข้าถึง phpMyAdmin
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - management
+    restart: always
+
+networks:
+  management:
+    driver: bridge
+
+volumes:
+  mysql_data:
+    driver: local

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Records</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> <!-- เพิ่มฟอนต์ Poppins -->
+    <link rel="stylesheet" href="maintenancepage.css">
+</head>
+
+<body>
+    <button class="menu-toggle" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+    <nav id="sidebar" class="slide-menu">
+        <ul>
+            <li><a href="equipment.html">Equipment</a></li>
+            <li><a href="borrow.html">Borrow Records</a></li>
+            <li><a href="user.html">User Directory</a></li>
+            <li><a href="report.html">Reports</a></li>
+            <li><a href="setting.html">Settings</a></li>
+            <li><a href="webpage.html">Back to Homepage</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div class="content-box">
+            <a href="webpage.html" class="btn back-home">Back to Homepage</a>
+            
+            <h2>Maintenance Records</h2>
+
+            <button id="addBtn" class="btn add">Add Maintenance ID</button>
+
+            <div id="infoMessage" style="display: none; color: rgb(155, 228, 202); margin-top: 10px;">
+                Information was found!
+            </div>
+
+            <!-- delete edit -->
+            <!-- <button class="edit-btn" data-id="${user.id}">Edit</button>
+            <button class="delete-btn" data-id="${user.id}">Delete</button> -->
+            
+            <p><input type="text" id="search" class="search-box" placeholder="🔍 search">
+            </p>
+
+            <table id="maintenance-table">
+                <thead>
+                    <tr>
+                        <th>MaintenanceID</th>
+                        <th>EquipmentID</th>
+                        <th>Maintenance Date</th>
+                        <th>Description</th>
+                        <th>Repair Status</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody id="maintenance"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="maintenance.js"></script>
+</body>
+</html>

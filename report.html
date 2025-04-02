@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reportpage.css">
+</head>
+<body>
+    <button class="menu-toggle" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+    <nav id="sidebar" class="slide-menu">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="equipment.html">Equipment</a></li>
+            <li><a href="maintenance.html">Maintenance</a></li>
+            <li><a href="borrow.html">Borrow Records</a></li>
+            <li><a href="user.html">User Directory</a></li>
+            <li><a href="setting.html">Settings</a></li>
+            <li><a href="webpage.html">Back to Homepage</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div class="content-box">
+        <a href="webpage.html" class="btn back-home">Back to Homepage</a>
+            
+        <h2>Report Management</h2>
+
+        <button id="addReportBtn" class="btn">Add Report</button>
+
+        <!-- ข้อความแสดงผลหลังค้นหา -->
+        <div id="infoMessage" style="display: none; color: rgb(132, 205, 132); margin-top: 10px;">
+            Information was found!
+        </div>
+
+        <button class="edit-btn" data-id="${user.id}">Edit</button>
+        <button class="delete-btn" data-id="${user.id}">Delete</button>
+
+        <p><input type="text" id="search" class="search-box" placeholder="🔍 search"></p>
+
+        
+
+        <table id="report-table">
+            <thead>
+                <tr>
+                    <th>Report ID</th>
+                    <th>Report Name</th>
+                    <th>Type</th>
+                    <th>Created Date</th>
+                    <th>Modified Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="report-body">
+                <!-- รายงานจะแสดงที่นี่ -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="report.js"></script>
+</body>
+</html>

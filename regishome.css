@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sukhumvit+Set:wght@300;400;500;700&display=swap');
+
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Adds a clean and modern font */
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #1a237e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Register Button Styling */
+.register-button {
+    background-color: #9292D1;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Register Container */
+.register-container {
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    margin: 0 auto; /* จัดให้อยู่กึ่งกลาง */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+    padding-right: 50px; /* ระยะห่างด้านขวา */
+}
+
+/* เอฟเฟกต์เมื่อปุ่มถูกคลิก */
+.register-button:active {
+    background-color: #388e3c; /* สีพื้นหลังเมื่อคลิก */
+    transform: scale(0.98); /* ลดขนาดปุ่มเล็กน้อย */
+}
+
+/* ปรับตำแหน่งของปุ่ม Apply to Register ให้อยู่ตรงกลาง */
+.register-button-container {
+    display: flex;
+    justify-content: center; /* จัดตำแหน่งปุ่มให้ตรงกลาง */
+    width: 100%;
+}
+.register-button:hover {
+    background-color: #424242;;
+    color: white;
+    transform: scale(1.02);
+}
+
+/* Header Styling */
+header h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 20px;
+}
+/* Form Styling */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* ปรับตำแหน่ง label และปุ่ม */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* ทำให้ label และปุ่มชิดซ้าย */
+    justify-content: center;
+    width: 100%;
+}
+/* Input Group Styling */
+.input-group label {
+    font-size: 15px;
+    color: #34495e;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Dropdown Styling (Role) */
+.input-group select {
+    width: 100%;
+    padding: 10px; /* Reduced padding for smaller size */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin: 0auto;
+    font-size: 14px; /* Adjusted font size for a compact look */
+    background-color: #f9f9f9;
+    color: #34495e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.input-group select:focus {
+    border-color: #3498db;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+/* ปุ่ม Back to Homepage */
+.back-home {
+    display: inline-block; /* ทำให้ลิงก์เป็นบล็อกเพื่อกำหนดกรอบได้ง่าย */
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+    padding: 10px 15px; /* ระยะห่างด้านใน */
+    border: 2px solid #979a9a; /* สีกรอบ */
+    border-radius: 15px; /* มุมกรอบโค้งมน */
+    font-family: 'Poppins', sans-serif; /* ฟ้อนต์ */
+    font-size: 16px; /* ขนาดข้อความ */
+    color: #2c3e50; /* สีข้อความ */
+    background-color: #ffffff; /* สีพื้นหลัง */
+    transition: background-color 0.3s ease, color 0.3s ease; /* เอฟเฟ็กต์ */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+}
+
+/* Wrapper สำหรับปุ่ม Back to Homepage */
+.back-home-container {
+    display: flex;
+    justify-content: center; /* จัดตำแหน่งให้ปุ่มอยู่ตรงกลาง */
+    margin-top: 20px; /* ระยะห่างจากเนื้อหาข้างบน */
+    width: 100%;
+    position: absolute;
+    bottom: 20px; /* ให้อยู่ด้านล่างสุด */
+    z-index: 2; /* ให้ปุ่มอยู่ด้านหน้า */
+    align-self: center;
+}
+.back-home:hover {
+    background-color: #444;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+
+/* Back Link Styling */
+a.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a.back-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+
+/* Back Link Styling */
+.back-link {
+    display: inline-block;
+    margin-top: 20px; /* Space from above content */
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+
+/* role register.html */
+select {
+    width: 40%;
+    padding: 10px;
+    border: 2px solid #b3e5fc;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+select:focus {
+    border-color: #2980b9;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+option {
+    background-color: white;
+    color: #333;
+    padding: 10px;
+}
+
+/* ฟอนต์และสไตล์ของช่องกรอกข้อมูล */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    font-family: 'Poppins', sans-serif; /* ฟอนต์ */
+    font-size: 13px; /* ขนาดตัวอักษร */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* จัดปุ่มให้อยู่ตรงกลาง */
+    gap: 15px; /* ระยะห่างระหว่างปุ่ม */
+    padding: 50px;
+}
+
+nav button {
+    background-color: #3949ab; /* สีพื้นหลังปุ่ม */
+    color: #ffffff; /* สีตัวอักษร */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav button:hover {
+    background-color: #1a252f; /* สีเข้มขึ้นเมื่อโฮเวอร์ */
+    transform: scale(1.05); /* ขยายขนาดเล็กน้อย */
+}
+
+nav button:active {
+    background-color: #566573; /* สีเมื่อกด */
+    transform: scale(0.98); /* กดแล้วหดลงเล็กน้อย */
+}
+

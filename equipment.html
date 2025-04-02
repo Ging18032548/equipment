@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="equipmentpage.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="content-box">
+            <a href="webpage.html" class="btn back-home" onclick="goBack()">Back to Homepage</a> <!-- ใช้ goBack() กับปุ่ม -->
+            
+            <h2>Equipment List</h2>
+
+            <button id="addBtn" class="btn add">Add Equipment ID</button>
+
+            <div id="infoMessage" style="display: none; color: rgb(132, 205, 132); margin-top: 10px;">
+                Information was found!
+            </div>
+
+            <!-- delete edit -->
+            <!-- <button class="edit-btn" data-id="${user.id}">Edit</button>
+            <button class="delete-btn" data-id="${user.id}">Delete</button> -->
+
+            <input type="text" id="search" class="search-box" placeholder="🔍 search">
+
+            <!-- Table to display equipment data -->
+            <table id="equipment-table">
+                <thead>
+                    <tr>
+                        <th>Equipment ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Brand</th>
+                        <th>Quantity</th>
+                        <th>Purchase Date</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id="equipment"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="equipment.js"></script> 
+    <!-- ใช้ JavaScript แยกไฟล์ -->
+</body>
+</html>

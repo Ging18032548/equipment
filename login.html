@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sukhumvit+Set:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="loginpage.css" />
+</head>
+<body>
+  <!-- คอนเทนเนอร์หลัก -->
+  <div class="content-box">
+    <!-- ส่วนหัวอยู่ด้านบนของกล่อง -->
+    <h2>Login to Your Account</h2>
+    
+    <!-- ฟอร์มกลาง -->
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="username" required>
+  
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="password" required>
+  
+      <button type="submit">Login</button>
+    </form>
+    
+    <!-- ส่วนลิงก์อยู่ด้านล่างของกล่อง -->
+    <div class="footer-section">
+      <p class="register-link">
+        Don't have an account? 
+        <a href="register.html">Register here</a>.
+      </p>
+      <a class="back-home" href="webpage.html">Back to Homepage</a>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

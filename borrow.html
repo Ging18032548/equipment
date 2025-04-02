@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow Records</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="borrow.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="borrowpage.css">
+</head>
+<body>
+    <button class="menu-toggle" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+    <nav id="sidebar" class="slide-menu">
+        <ul>
+            <li><a href="equipment.html">Equipment</a></li>
+            <li><a href="maintenance.html">Maintenance</a></li>
+            <li><a href="user.html">User Directory</a></li>
+            <li><a href="report.html">Reports</a></li>
+            <li><a href="setting.html">Settings</a></li>
+            <li><a href="webpage.html">Back to Homepage</a></li>
+        </ul>
+    </nav>
+    <div class="main-container"></div>
+    <div class="content-box">
+        <a href="webpage.html" class="btn back-home">Back to Homepage</a>
+        <h2>Borrow Records</h2>
+
+        <button id="addBtn" class="btn add">Add Record ID</button>
+
+        <div id="infoMessage" style="display: none; color: rgb(132, 205, 132); margin-top: 10px;">
+            Information was found!
+        </div>
+
+        <!-- delete edit -->
+        <button class="edit-btn" data-id="${user.id}">Edit</button>
+        <button class="delete-btn" data-id="${user.id}">Delete</button>
+        
+        <p><input type="text" id="search" class="search-box" placeholder="🔍 search"></p>
+
+        <table id="borrow-table">
+            <thead>
+                <tr>
+                    <th>Borrow ID</th>
+                    <th>EquipmentID</th>
+                    <th>User ID</th>
+                    <th>Borrow Date</th>
+                    <th>Return Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="borrow-records-body">
+                <!-- ข้อมูลจะถูกโหลดที่นี่ -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script>
+        // ใช้ Axios เพื่อดึงข้อมูลจาก API
+        axios.get('http://localhost:3000/api/borrow_records')
+            .then(response => {
+                const borrowRecords = response.data;
+                const borrowTableBody = document.getElementById('borrow-records-body');
+                borrowRecords.forEach(record => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${record.borrow_id}</td>
+                        <td>${record.equipment_id}</td>
+                        <td>${record.user_id}</td>
+                        <td>${record.borrow_date}</td>
+                        <td>${record.return_date}</td>
+                        <td>${record.status}</td>
+                    `;
+                    borrowTableBody.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching borrow records:', error);
+            });
+    </script>
+</body>
+</html>

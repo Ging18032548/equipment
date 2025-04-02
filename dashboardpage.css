@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sukhumvit+Set:wght@300;400;500;700&display=swap');
+
+/* รีเซ็ตค่าเริ่มต้นของ CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ตั้งค่าสำหรับ Body */
+body {
+    background-color: #f4f6f9;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* คอนเทนเนอร์หลัก */
+.main-container {
+    width: 80%;
+    max-width: 1000px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ปุ่ม Back to Homepage */
+.btn.back-home {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #6a5acd;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+   
+}
+
+.btn.back-home:hover {
+    background-color: #5340a1;
+    transform: scale(1.05);
+}
+
+/* ส่วนของ Dashboard */
+.dashboard h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1a237e;
+}
+
+/* ข้อมูลพื้นฐาน */
+.info p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* ส่วนของ Notifications & Recent Activity */
+h2 {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #0d47a1;
+}
+
+ul {
+    list-style: none;
+    padding: 10px;
+    background: #e3f2fd;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+ul li {
+    padding: 8px;
+    border-bottom: 1px solid #bbdefb;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+/* ส่วนของ Widgets */
+#widgets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.widget {
+    background: #90caf9;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    font-weight: bold;
+    color: #0d47a1;
+}
+
+/* สไตล์ของแถบเมนู */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* ซ่อนแถบเมนูไว้ทางซ้าย */
+    width: 250px;
+    height: 100%;
+    color: black;
+    transition: left 0.3s ease; /* ทำให้การแสดงผลของแถบเมนูเป็นไปอย่างนุ่มนวล */
+    z-index: 1000; /* ทำให้แถบเมนูอยู่เหนือเนื้อหา */
+    font-family: 'Poppins', sans-serif;
+}
+
+.slide-menu ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.slide-menu li {
+    margin-bottom: 10px;
+}
+
+.slide-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.slide-menu a:hover {
+    background-color: #444;
+    color: white;
+}
+
+/* ปุ่มเปิด/ปิดเมนู */
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 15px;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    z-index: 1050; /* ทำให้ปุ่มอยู่เหนือเมนู */
+}
+
+.menu-toggle:hover {
+    background-color: #1a237e;
+    color: white;
+    transform: scale(1.05);
+}
+/* เมื่อคลิกที่ปุ่ม, แถบเมนูจะเลื่อนเข้ามา */
+.slide-menu.active {
+    left: 0;
+}
+
+.menu-toggle.hidden {
+    display: none; /* ซ่อนปุ่มเมนู */
+}
+

@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sukhumvit+Set:wght@300;400;500;700&display=swap');
+
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','Sukhumvit Set', sans-serif;
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+}
+
+/* ตั้งค่าพื้นหลังของหน้า */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* ปุ่ม edit และ delete */
+button.edit {
+    background-color: #afbfff;/* สีพื้นหลัง */
+    color: black; /* สีข้อความ */
+    border: 2px solid #1b4f72;; /* สีกรอบ */
+    border-radius: 10px; /* มุมปุ่มโค้งมน */
+    padding: 10px 20px; /* ระยะห่างด้านใน */
+    font-size: 16px; /* ขนาดฟ้อนต์ */
+    cursor: pointer; /* เปลี่ยนรูปเมาส์เมื่อชี้ */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* เอฟเฟ็กต์เมื่อโต้ตอบ */
+}
+
+button.edit:hover {
+    background-color: #1a237e; /* เปลี่ยนสีเมื่อชี้ */
+    transform: scale(1.03); /* ขยายเล็กน้อยเมื่อชี้ */
+}
+/* delete */
+button.delete {
+    background-color: #f8bbd0; /* สีพื้นหลัง */
+    color: back; /* สีข้อความ */
+    border: 2px solid #c2185b; /* สีกรอบ */
+    border-radius: 10px; /* มุมปุ่มโค้งมน */
+    padding: 10px 20px; /* ระยะห่างด้านใน */
+    font-size: 16px; /* ขนาดฟ้อนต์ */
+    cursor: pointer; /* เปลี่ยนรูปเมาส์เมื่อชี้ */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* เอฟเฟ็กต์เมื่อโต้ตอบ */
+}
+
+button.delete:hover {
+    background-color: #C21E56; /* เปลี่ยนสีเมื่อชี้ */
+    transform: scale(1.03); /* ขยายเล็กน้อยเมื่อชี้ */
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #007BFF, #0056b3); /* ใช้ Gradient */
+    color: white;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* หัวข้อ */
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* ปุ่มเมนู */
+nav button {
+    background-color: white;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background-color: #0056b3;
+    color: white;
+    border-color: #0056b3;
+}
+
+/* กล่องเนื้อหา */
+.content-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    text-align: center;
+}
+
+/* หัวข้อ */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ตาราง */
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+/* ส่วนหัวของตาราง */
+thead {
+    background: #7886C7;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* แถวของข้อมูล */
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+/* เอฟเฟกต์เมื่อชี้แถวตาราง */
+tbody tr:hover {
+    background: #e2e6ea;
+    transform: scale(1.02); /* ขยายเล็กน้อยเมื่อชี้ */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* ตัวอย่างการตกแต่งปุ่ม */
+button {
+    background-color: #ffffff; /* สีพื้นหลัง */
+    border: 2px solid #1b4f72; /* สีกรอบ */
+    border-radius: 10px; /* มุมปุ่มโค้งมน */
+    color: #2c3e50; /* สีข้อความ */
+    font-family: 'Roboto', sans-serif; /* ฟ้อนต์ข้อความ */
+    font-size: 16px; /* ขนาดฟ้อนต์ */
+    padding: 10px 20px; /* ระยะห่างด้านในปุ่ม */
+    cursor: pointer; /* เปลี่ยนรูปเมาส์เมื่อชี้ */
+    transition: background-color 0.3s ease, color 0.3s ease; /* เอฟเฟ็กต์เมื่อโต้ตอบ */
+    margin: 0px auto;
+    margin-top: 20px; /* ระยะห่างด้านบน */
+}
+
+button:hover {
+    background-color: #2c3e50; /* สีพื้นหลังเมื่อเมาส์ชี้ */
+    color: #ffffff; /* สีข้อความเมื่อเมาส์ชี้ */
+}
+
+/* ปุ่มค้นหา 🔍 */
+.search-container {
+    margin-top: 20px; /* ระยะห่างด้านบน */
+    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างปุ่มและตาราง */
+    text-align: center; /* จัดปุ่มให้อยู่กึ่งกลาง */
+}
+
+.search-box {
+    margin-top: 20px; /* ระยะห่างด้านบน */
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 15px auto;
+    margin-top: 30px;
+    display: block;
+    font-size: 16px;
+    border: 2px solid #E5D9F2;
+    border-radius: 20px;
+    text-align: absolute;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-box:focus {
+    border-color: #B5A8D5;
+    box-shadow: 0px 0px 5px rgba(142, 68, 173, 0.5);
+}
+
+/* กล่องค้นหา */
+.user-directory-button {
+    background-color: #4CAF50; /* สีพื้นหลัง */
+    color: white; /* สีข้อความ */
+    border: none; /* กำจัดกรอบ */
+    border-radius: 10px; /* มุมปุ่มโค้งมน */
+    padding: 10px 20px; /* ระยะห่างด้านใน */
+    font-family: 'Poppins', sans-serif; /* ฟ้อนต์ */
+    font-size: 16px; /* ขนาดข้อความ */
+    cursor: pointer; /* เปลี่ยนรูปเมาส์เมื่อชี้ */
+    transition: background-color 0.3s ease; /* เอฟเฟ็กต์เมื่อชี้ */
+}
+
+button.user-directory-button:hover {
+    background-color: #45a049; /* เปลี่ยนสีเมื่อชี้ */
+}
+
+/* Container for Sign-In Form */
+.sign-in-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+/* Form Headings */
+.sign-in-container h1, .sign-in-container h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Form Labels */
+label {
+    display: block;
+    font-size: 14px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Submit Button */
+.btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    box-shadow: 0px 0px 8px rgba(52, 152, 219, 0.3);
+    border-color: #3498db;
+}
+
+.register-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Header Styling */
+header h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Login Link */
+.login-link {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* คอนเทนเนอร์ของปุ่มทั้งหมด */
+.button-container {
+    display: flex; /* ใช้ flexbox */
+    justify-content: center; /* จัดปุ่มให้อยู่กลาง */
+    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+    margin-top: 20px; /* ระยะห่างจากตาราง */
+}
+
+button.add {
+    background-color: white; /* Original blue */
+    color: black;
+    border: 2px solid #979a9a;;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds slight depth */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
+    font-family: 'Poppins', sans-serif;
+}
+
+button.add:hover {
+    background-color: #9e9e9e;
+    transform: scale(1.03); /* Slight enlargement for interactivity */
+}
+
+button.edit, button.btn.add, button.edit-btn, button.delete-btn {
+    background-color: white;
+    color: black;
+    border: 2px solid #1b4f72;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+button.edit:hover, button.btn.add:hover, button.edit-btn:hover, button.delete-btn:hover {
+    background-color: #000080;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    width: 100%;
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    box-shadow: 0px 0px 8px rgba(52, 152, 219, 0.3);
+    border-color: #3498db; /* Highlighted border on focus */
+}
+
+.login-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.03);
+}
+
+.register-link {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 15px;
+}
+
+.register-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* equipment btn */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid #979a9a;
+    transition: background-color 0.3s;
+}
+/* mouse point */
+a:hover {
+    background-color: #d6eaf8;
+}
+
+
+/* Back to Homepage Link */
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #2ecc71;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #27ae60;
+}
+
+/* maintain button */
+.main-container {
+    text-align: center;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-button {
+    background-color: #2196F3;
+}
+
+.add {
+    background-color: #4CAF50;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+/*  */
+.login-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.login-form h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* การจัดการสไตล์ทั่วไปสำหรับย่อหน้า */
+p {
+    font-family: 'Arial', sans-serif; /* ใช้ฟอนต์ที่อ่านง่ายและสะอาดตา */
+    font-size: 16px; /* ขนาดฟอนต์มาตรฐานเพื่อความอ่านง่าย */
+    color: #34495e; /* สีเข้มที่เป็นกลางสำหรับข้อความ */
+    line-height: 1.6; /* ปรับระยะห่างระหว่างบรรทัดเพื่อความชัดเจน */
+    margin: 10px 0; /* เพิ่มระยะห่างรอบ ๆ ย่อหน้า */
+    text-align: justify; /* จัดข้อความให้เรียบและอ่านง่าย */
+}
+
+/* การเน้นย้ำในย่อหน้า */
+p.emphasized {
+    font-weight: 600; /* ข้อความตัวหนา */
+    color: #3498db; /* สีฟ้าที่เน้นข้อความ */
+    font-size: 18px; /* ขนาดฟอนต์ที่ใหญ่ขึ้นเล็กน้อยเพื่อการเน้น */
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* ปุ่ม Back to Homepage */
+.back-home {
+    display: inline-block; /* ทำให้ลิงก์เป็นบล็อกเพื่อกำหนดกรอบได้ง่าย */
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+    padding: 10px 15px; /* ระยะห่างด้านใน */
+    border: 2px solid #979a9a; /* สีกรอบ */
+    border-radius: 15px; /* มุมกรอบโค้งมน */
+    font-family: 'Poppins', sans-serif; /* ฟ้อนต์ */
+    font-size: 16px; /* ขนาดข้อความ */
+    color: #2c3e50; /* สีข้อความ */
+    background-color: #ffffff; /* สีพื้นหลัง */
+    transition: background-color 0.3s ease, color 0.3s ease; /* เอฟเฟ็กต์ */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+}
+
+.back-home:hover {
+    background-color: #444;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+.input-group label {
+    font-size: 14px;
+    color: #34495e;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Dropdown Styling */
+.input-group select {
+    background-color: #f9f9f9;
+    color: #34495e;
+    appearance: none; /* Removes default browser styling */
+    cursor: pointer;
+}
+
+.input-group select:focus {
+    background-color: #ffffff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#infoMessage {
+    font-size: 16px;
+    color: #1abc9c;
+    margin-top: 15px;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .button-container .btn {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* ขนาดหน้าจอเล็กๆ เช่น โทรศัพท์มือถือ */
+    h1 {
+        font-size: 20px;
+    }
+
+    .content-box {
+        width: 95%;
+        padding: 15px;
+    }
+
+    /* ขนาดของปุ่มค้นหา */
+    .search-box {
+        width: 90%;
+        padding: 10px;
+    }
+
+    /* ปรับขนาดปุ่ม */
+    button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+
+

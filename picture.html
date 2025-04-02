@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usage Status</title>
+    <link rel="stylesheet" href="picturepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <button class="menu-toggle" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+    <nav id="sidebar" class="slide-menu">
+        <ul>
+            <li><a href="equipment.html">Equipment</a></li>
+            <li><a href="maintenance.html">Maintenance</a></li>
+            <li><a href="borrow.html">Borrow Records</a></li>
+            <li><a href="report.html">Reports</a></li>
+            <li><a href="setting.html">Settings</a></li>
+            <li><a href="webpage.html">Back to Homepage</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- <h1>Office Equipment Usage Status</h1> -->
+        <div class="equipments-con"></div>  
+        <!-- คลุมรอบสินค้า -->
+            <div class="equipments-item">
+                <div class="equipments-img">
+                    <img src=https://media.istockphoto.com/id/1284066336/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B9%81%E0%B8%81%E0%B8%94%E0%B9%80%E0%B8%88%E0%B9%87%E0%B8%95%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%97%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B8%B1%E0%B8%A2%E0%B9%83%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%81%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%87%E0%B8%A0%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%99%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B9%8D%E0%B8%B2%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%84%E0%B9%80%E0%B8%A7%E0%B8%B4%E0%B8%A3%E0%B9%8C%E0%B8%84%E0%B8%81%E0%B8%B4%E0%B8%87%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%9E%E0%B8%A3%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B2%E0%B8%94%E0%B8%82%E0%B8%AD%E0%B8%87-covid-19.jpg?s=612x612&w=0&k=20&c=u2dSZm_odmYdrwApFIGa6cZBU_T9OGiBu09QVIpVBLU=>
+                   
+                </div>
+                <div class="equipments-info">
+                    <h2>Office Chair</h2>
+                    <h3>Quantity</h3>
+                    <h4>Status
+                        <div class="Status-left"></div>
+                            <span>borrow 25</span>
+                        <div class="Status-right"></div>
+                            <span>available 25</span>
+                    </h4>
+                </div>
+            </div>
+    </div>
+
+    <div class="equipments-item">
+        <div class="equipments-img">
+            <img src="https://media.istockphoto.com/id/864618650/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%95%E0%B8%B9%E0%B9%89%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%9A%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3.jpg?s=612x612&w=0&k=20&c=vnY0NVkV1C11OlAlRaQftKndgOq3XVO68Ys84iRk-8w=">
+        </div>
+        <div class="equipments-info">
+            <h2>Bookshelf</h2>
+            <h3>Quantity</h3>
+            <h4>Status
+                <div class="Status-left"></div>
+                    <span>borrow 25</span>
+                <div class="Status-right"></div>
+                    <span>available 25</span>
+            </h4>
+        </div>
+    </div>
+
+       
+    <div class="equipments-item">
+        <div class="equipments-img">
+            <img src="https://media.istockphoto.com/id/1213573873/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%AA%E0%B8%B5%E0%B8%AA%E0%B8%B1%E0%B8%99%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B9%84%E0%B8%94%E0%B9%89%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%AA%E0%B8%B5%E0%B8%82%E0%B8%B2%E0%B8%A7.jpg?s=612x612&w=0&k=20&c=ZZ5HUJkV2bV0EVN0mRbLn4dFBN2K_K21YlRWuqZOWo0=">
+        </div>
+        <div class="equipments-info">
+            <h2>Stationery</h2>
+            <h3>Quantity</h3>
+            <h4>Status
+                <div class="Status-left"></div>
+                    <span>borrow 25</span>
+                <div class="Status-right"></div>
+                    <span>available 25</span>
+            </h4>
+        </div>
+    </div>
+
+    <div class="equipments-item">
+        <div class="equipments-img">
+            <img src="https://media.istockphoto.com/id/866925484/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%9E%E0%B9%8C%E0%B8%82%E0%B8%99%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%B0%E0%B8%97%E0%B8%B1%E0%B8%94%E0%B8%A3%E0%B8%B1%E0%B8%94.jpg?s=612x612&w=0&k=20&c=K2MaKUJpXwcf2vT744mBUsLlYZGe-HpXyFFp5wqk5YI=">
+        </div>
+        <div class="equipments-info">
+            <h2>Printer</h2>
+            <h3>Quantity</h3>
+            <h4>Status
+                <div class="Status-left"></div>
+                    <span>ready to use 18</span>
+                <div class="Status-right"></div>
+                    <span>repair 2</span>
+            </h4>
+        </div>
+    </div>
+
+    <div class="equipments-item">
+        <div class="equipments-img">
+            <img src="https://www.dohome.co.th/media/Content/C004_Knowledge/CAT003_Home_Appliance/SC024/dohome_projector_OK.jpg">
+        </div>
+        <div class="equipments-info">
+            <h2>Projector</h2>
+            <h3>Quantity</h3>
+            <h4>Status
+                <div class="Status-left"></div>
+                    <span>ready to use 24</span>
+                <div class="Status-right"></div>
+                    <span>repair 1</span>
+            </h4>
+        </div>
+    </div>
+   
+    <a href="webpage.html" class="back-to-homepage">Back to Homepage</a>
+    <script src="picture.js"></script>
+</body>
+</html>

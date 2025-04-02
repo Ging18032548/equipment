@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboards</title>
+    <link rel="stylesheet" href="dashboardpage.css"> <!-- เชื่อมกับ CSS -->
+</head>
+<body>
+    <button class="menu-toggle" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+    <nav id="sidebar" class="slide-menu">
+        <ul>
+            <li><a href="equipment.html">Equipment</a></li>
+            <li><a href="maintenance.html">Maintenance</a></li>
+            <li><a href="borrow.html">Borrow Records</a></li>
+            <li><a href="user.html">User Directory</a></li>
+            <li><a href="report.html">Reports</a></li>
+            <li><a href="setting.html">Settings</a></li>
+            <li><a href="webpage.html">Back to Homepage</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div class="content-box">
+            <a href="webpage.html" class="btn back-home" onclick="goBack()">Back to Homepage</a> <!-- ใช้ goBack() กับปุ่ม -->
+            
+    <div class="dashboard">
+        <h1>Dashboards</h1>
+        
+        <div class="info">
+            <p><strong>Dashboard ID:</strong> <span id="dashboard_id"></span></p>
+            <p><strong>Admin User:</strong> <span id="user_id"></span></p>
+            <p><strong>Last Login:</strong> <span id="lastlogin"></span></p>
+        </div>
+
+        <h2>Notifications</h2>
+        <ul id="notifications"></ul>
+
+        <h2>Recent Activity</h2>
+        <ul id="recentactivity"></ul>
+
+        <h2>Equipment & Supplies Status</h2>
+        <div id="widgets"></div>
+    </div>
+
+    <script src="dashboard.js"></script> <!-- เชื่อมกับ JS -->
+</body>
+</html>

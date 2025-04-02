@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Supplies Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="webpage.css">
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <h1>Welcome To Office Supplies & Equipment Management</h1>
+        <p>Manage your office supplies and equipment with ease.</p>
+            <p>จัดการอุปกรณ์และวัสดุสำนักงานของคุณได้อย่างง่ายดาย</p>
+        
+
+        <!-- Navigation Menu -->
+        <nav class="menu">
+            <ul>
+                <li><button onclick="goToPage('dashboard.html')"><i class="fas fa-home"></i> Dashboard</button></li>
+                <li><button onclick="goToPage('equipment.html')"><i class="fas fa-desktop"></i> Equipment</button></li>
+                <li><button onclick="goToPage('maintenance.html')"><i class="fas fa-tools"></i> Maintenance</button></li>
+                <li><button onclick="goToPage('borrow.html')"><i class="fas fa-handshake"></i> Borrow Records</button></li>
+                <li><button onclick="goToPage('user.html')"><i class="fas fa-users"></i> User Directory</button></li>
+                <li><button onclick="goToPage('report.html')"><i class="fas fa-chart-line"></i> Reports</button></li>
+                
+                <!-- Dropdown Menu -->
+                <li class="dropdown">
+                    <button class="dropbtn"><i class="fas fa-cogs"></i> Settings</button>
+                    <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="settings.html">System Settings</a>
+                        <a href="logout.html">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page; // เปลี่ยนหน้าเว็บไปยังตารางข้อมูล
+        }
+    </script>
+
+    <footer>
+        <a href="register.html">Back to Register Page</a>
+        <a href="login.html">Back to Login Page</a>
+        <a href="admin.html">Admin Page</a>
+        <a href="picture.html">Usage Status</a>
+        <a href="setting.html">Setting</a>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="regishome.css">
+    <link rel="stylesheet" href="webpage.css">
+    <link rel="stylesheet" href="menu.html">
+    <!-- <link rel="stylesheet" href="setting.html"> -->
+</body>
+</html>

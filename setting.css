@@ -1,0 +1,145 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ตั้งค่า Body */
+body {
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* คอนเทนเนอร์หลัก */
+.main-container {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* หัวข้อ */
+h1 {
+    text-align: center;
+    color: #1a237e;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #0d47a1;
+}
+
+/* กลุ่มการตั้งค่า */
+.settings-group {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ปุ่ม */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5340a1;
+}
+
+/* ปุ่ม Logout */
+.logout-btn {
+    background-color: #d32f2f;
+}
+
+.logout-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* ปุ่มกลับ */
+.btn.back-home {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #616161;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn.back-home:hover {
+    background-color: #424242;
+}
+
+button {
+    background-color: #91a7ff; 
+    color: #1a237e; 
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:  0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #1a237e; /* เปลี่ยนสีเมื่อโฮเวอร์ */
+    color: white; 
+}
+
+button:active {
+    background-color: #1e7e34; /* เปลี่ยนสีเมื่อคลิก */
+    transform: scale(1.05);
+}
+
+/* ปุ่ม Logout */
+.logout-btn {
+    display: block; /* ให้ปุ่มอยู่แถวเดียว */
+    padding: 10px 20px;
+    background-color: #e74c3c; /* สีแดง */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:  0.3s ease, transform 0.2s ease;
+    margin-top: 10px; /* ขยับลงมาจากข้อความ */
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b; /* เปลี่ยนสีเมื่อ hover */
+    transform: scale(1.05); /* ทำให้ปุ่มขยายเล็กน้อยเมื่อชี้ */
+}
+
+.logout-btn:active {
+    transform: scale(0.95); /* ทำให้ปุ่มหดลงเล็กน้อยเมื่อกด */
+}
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="userpage.css">
+
+</head>
+<body>
+    <button class="menu-toggle" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+    <nav id="sidebar" class="slide-menu">
+        <ul>
+            <li><a href="equipment.html">Equipment</a></li>
+            <li><a href="maintenance.html">Maintenance</a></li>
+            <li><a href="borrow.html">Borrow Records</a></li>
+            <li><a href="report.html">Reports</a></li>
+            <li><a href="setting.html">Settings</a></li>
+            <li><a href="webpage.html">Back to Homepage</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container"></div>
+    <div class="content-box">
+        <a href="webpage.html" class="btn back-home">Back to Homepage</a>
+        <h2>User Directory</h2>
+    
+        <button id="addBtn" class="btn add">Add User</button>
+        
+        <!-- ข้อความแสดงผลหลังค้นหา -->
+        <div id="infoMessage" style="display: none; color: rgb(132, 205, 132); margin-top: 10px;">
+            Information was found!
+        </div>
+
+        <button class="edit-btn" data-id="${user.id}">Edit</button>
+        <button class="delete-btn" data-id="${user.id}">Delete</button>
+
+        <p><input type="text" id="search" class="search-box" placeholder="🔍 search"></p> 
+
+       
+        
+        
+        <table id="user">
+            <thead>
+                <tr>
+                    <th>User_ID</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Department</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody id="user-body"></tbody>
+        </table>
+    </div>
+
+
+     <!-- ข้อความแจ้งเตือนหลังการอัพเดต -->
+     <div id="message" class="message"></div>
+
+     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+     <script src="user.js"></script>
+ </body>
+ </html>

@@ -1,0 +1,270 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 90vh;
+}
+/* กำหนดสไตล์สำหรับ container ที่ใช้ครอบเนื้อหา */
+.content-box {
+    background-color: #ffffff;           /* พื้นหลังสีขาว */
+    padding: 30px;                       /* ระยะห่างภายในกล่อง */
+    margin: 20px auto;                   /* ไม่ให้ชิดขอบ จัดให้อยู่กลาง (auto) */
+    border-radius: 12px;                 /* ทำมุมโค้งมน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เงาเพื่อเพิ่มมิติ */
+    width: 90%;                          /* กำหนดความกว้างให้ยืดหยุ่น */
+    max-width: 1200px;                   /* กำหนดความกว้างสูงสุด */
+    box-sizing: border-box;  
+    text-align: center;           
+  }
+  
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #003366;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #f9f9f9;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #003366;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #d9e4f5;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family:  'Poppins', sans-serif;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:nth-child(1) {
+    background-color: #ffcc00;
+    color: black;
+}
+
+button:nth-child(2) {
+    background-color: white;
+    color: black;
+}
+
+.btn {
+    
+    border: 2px solid #1a237e; /* เส้นขอบน้ำเงินเข้ม */
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #1a237e; /* พื้นหลังเปลี่ยนน้ำเงินเข้ม */
+    color: white; /* ตัวอักษรเปลี่ยนเป็นสีขาว */
+    transform: scale(1.05); /* ขยายขึ้นเล็กน้อย */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    background-color: #0d1b50; /* กดแล้วเป็นน้ำเงินเข้มขึ้น */
+    transform: scale(0.95);
+}
+
+a.btn.back-home {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #6a5acd;
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    padding: 12px 20px; /* ปรับ padding ด้านซ้าย-ขวา */
+    padding-left: 30px; /* เพิ่ม padding ซ้ายเพื่อให้ข้อความไม่ชิดเกินไป */
+    padding-right: 30px; /* ปรับให้สมดุล */
+}
+
+a.btn.back-home:hover {
+    background-color: #616161;
+    border-color: #616161;
+    color: white;
+    transform: scale(1.05);
+    border-radius: 20px;
+}
+
+
+/* คอนเทนเนอร์ของปุ่มทั้งหมด */
+.button-container {
+    display: flex; /* ใช้ flexbox */
+    justify-content: center; /* จัดปุ่มให้อยู่กลาง */
+    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+    margin-top: 20px; /* ระยะห่างจากตาราง */
+}
+
+button.edit, button.btn.add, button.edit-btn, button.delete-btn {
+    background-color: white;
+    color: black;
+    border: 2px solid #1b4f72;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+}
+
+button.edit:hover, button.btn.add:hover, button.edit-btn:hover, button.delete-btn:hover {
+    background-color: #000080;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ช่องค้นหา */
+.search-box {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-box:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* ปุ่ม add report */
+#addReportBtn {
+    background-color: white; 
+    color: black; /* ข้อความสีขาว */
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 2px solid #1b4f72;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* เมื่อเมาส์ชี้ที่ปุ่ม */
+#addReportBtn:hover {
+    background-color: #424242; /* สีพื้นหลังเปลี่ยนเป็นสีเทาเข้ม */
+    transform: scale(1.05); /* ทำให้ปุ่มขยายขนาดเล็กน้อยเมื่อเมาส์ชี้ */
+    color: white; /* ข้อความสีขาว */
+}
+
+/* สไตล์ของแถบเมนู */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* ซ่อนแถบเมนูไว้ทางซ้าย */
+    width: 250px;
+    height: 100%;
+    color: black;
+    transition: left 0.3s ease; /* ทำให้การแสดงผลของแถบเมนูเป็นไปอย่างนุ่มนวล */
+    z-index: 1000; /* ทำให้แถบเมนูอยู่เหนือเนื้อหา */
+    font-family: 'Poppins', sans-serif;
+    bqckground-color: #f0f4f8;
+}
+
+.slide-menu ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.slide-menu li {
+    margin-bottom: 10px;
+}
+
+.slide-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #e1f5fe;
+}
+
+.slide-menu hover {
+    background-color: black;
+    color: white;
+}
+
+.slide-menu a:hover {
+    background-color: #bdbdbd; /* Light blue on hover */
+    color: white; /* White text on hover */
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #add8e6, #87ceeb); /* Light blue gradient */
+    color: #ffffff; /* White text */;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    z-index: 1050;
+    transition: 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-toggle:hover {
+    background-color: #616161;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* เมื่อคลิกที่ปุ่ม, แถบเมนูจะเลื่อนเข้ามา */
+.slide-menu.active {
+    left: 0;
+}
+
+.menu-toggle.hidden {
+    display: none; /* ซ่อนปุ่มเมนู */
+}

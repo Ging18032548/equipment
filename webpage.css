@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White background */
+    color: #333; /* Neutral dark grey text */
+    line-height: 1.6;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    min-height: 100vh; /* Full screen height */
+    border-shadow: 100px;
+    margin-top: 100px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Light abstract tones */
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff; /* Rich navy blue */
+    color: white; /* White text */
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+header h1 {
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+/* Navigation Buttons */
+nav button {
+    background-color: #e0e0e0; 
+    color: black;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    border: none;
+    border-radius: 15px; /* Rounded corners for modern look */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav button:hover {
+    background-color: #003366; /* Darker blue on hover */
+    transform: scale(1.05); /* Zoom effect on hover */
+    color: white; /* White text on hover */
+}
+
+/* Links */
+a {
+    display: block;
+    text-align: center;
+    font-size: 1.1em;
+    color: #00509e; /* Blue for links */
+    text-decoration: none;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #003366; /* Darker blue hover effect */
+}
+
+ 
+p {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9; 
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Spread the content with space between */
+    min-height: 100vh; /* Full screen height */
+}
+
+
+/* สไตล์สำหรับ Navigation Menu */
+.menu {
+    margin-top: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.menu ul li button {
+    background-color: #1a237e;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);;
+}
+
+.menu ul li button i {
+    margin-right: 5px;
+}
+
+.menu ul li button:hover {
+    background-color: #1F2C3C; /* สีน้ำเงินเข้มขึ้นเมื่อ hover */
+}
+
+/* สไตล์ Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #2C3E50; /* สีตัวหนังสือในเมนู */
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+footer {
+    text-align: center; /* จัดให้อยู่ตรงกลาง */
+    margin-top: 180px; /* เพิ่มระยะห่างจากเนื้อหาด้านบน */
+    position: relative;
+    bottom: 160px; /* ย้าย footer ขึ้นมา 160px */
+}
+
+footer a {
+    display: inline-block; /* ทำให้ดูเหมือนปุ่ม */
+    background-color: #e3f2fd; /* สีน้ำเงินอ่อน */
+    color: #0d47a1; /* ตัวอักษรสีน้ำเงินเข้ม */
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    padding: 10px 20px; /* เพิ่มระยะภายในปุ่ม */
+    border: 2px solid #0d47a1; /* เส้นขอบสีน้ำเงินเข้ม */
+    border-radius: 10px; /* ทำขอบปุ่มมน */
+    margin: 5px; /* เว้นระยะห่างระหว่างปุ่ม */
+    font-family: 'Poppins', sans-serif; /* เปลี่ยนฟอนต์ */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    transition: background-color 0.3s ease, color 0.3s ease; /* ทำเอฟเฟกต์เวลา hover */
+    bottom: 160px;
+}
+
+footer a:hover {
+    background-color: #bbdefb; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    color: #ffffff; /* ตัวอักษรสีขาว */
+}
+
